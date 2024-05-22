@@ -47,7 +47,7 @@
 
 ***
 
-### Criação de Projeto Laravel com Pilha LAMP (MySQL, Redis, Mailhog)
+## Criação de Projeto Laravel com Pilha LAMP (MySQL, Redis, Mailhog)
 ~~~
 curl -s "https://laravel.build/meuprojeto?with=mysql,redis,mailhog" | bash
 ~~~
@@ -57,10 +57,22 @@ curl -s "https://laravel.build/meuprojeto?with=mysql,redis,mailhog" | bash
 - **?with=mysql,redis,mailhog**: Parâmetros para a criação do projeto, incluindo os serviços MySQL (banco de dados), Redis (cache) e Mailhog (servidor de e-mail para desenvolvimento).
 - **| bash**: Envia a saída do comando curl para o interpretador bash, que executa os scripts de configuração do Laravel Sail.
 
-### Criação de Projeto Laravel SAIL
+## Criação de Projeto Laravel SAIL
 ~~~
 curl -s "https://laravel.build/meuprojeto" | bash;
 ~~~
+
+## O comando `./vendor/bin/sail up -d` no Laravel
+
+O comando `./vendor/bin/sail up -d` é utilizado para iniciar o ambiente de desenvolvimento Laravel usando o Laravel Sail, uma ferramenta de desenvolvimento que fornece um ambiente local baseado em Docker para aplicações Laravel. Vamos analisar o comando em detalhes:
+
+- `./vendor/bin/sail`: Esta parte do comando aponta para o arquivo executável do Sail, que geralmente está localizado no diretório vendor/bin do seu projeto Laravel.
+
+- `up`: Esta é a ação principal que você deseja realizar, que é iniciar os containers Docker para sua aplicação Laravel.
+
+- `-d`: Esta flag significa "desanexado" e instrui o Sail a executar os containers em segundo plano. Isso significa que o comando retornará imediatamente e você não verá nenhuma saída dos containers.
+
+***
 
 ### Instalando Pacote de Desenvolvimento (blueprint)
 ~~~
@@ -84,6 +96,7 @@ blueprint:erase
 ~~~
 Este comando (assumindo que o pacote `laravel-shift/blueprint` está instalado) executa a tarefa de erase do Blueprint, que provavelmente remove arquivos gerados automaticamente ou limpa o diretório de cache.
 
+***
 
 ### Criando um Model:
 
