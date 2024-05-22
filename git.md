@@ -257,6 +257,40 @@ git pull origin master
 git branch -D <branch>
 ~~~
 
+
+git checkout master
+
+git fetch
+
+git pull origin master
+
+* git branch 
+
+git branch -D <branch>
+
+git checkout -b <branch>
+             
+chmod o+w * -R
+
+* git checkout branch
+
+* git branch 
+
+* git commit -a -m ""
+
+* git push origin <branch>
+
+* git checkout develop
+
+* git fetch
+
+* git pull origin develop
+
+* git merge <branch> develop
+
+* git push origin develop 
+
+
 - acessa branch `develop` remota ***( agora esta estará atualizada localmente)***
 ~~~
 git pull origin develop
