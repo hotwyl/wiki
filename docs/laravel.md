@@ -27,7 +27,15 @@
 
 `php artisan key:generate` Gerar uma chave, pois este é um projeto clonado
 
-`php artisan migrate` Cria as Tabelas na base de dados definida no arquivo `.env`
+`php artisan jwt:secret` Gerar uma chave do JWT, pois este é um projeto clonado
+
+3. Parametrize as configurações do projeto no arquivo `.env`
+
+4. Crie seu Banco de dados com os parametros definidos no arquivo .`.env`
+   
+`php artisan migrate` Cria as Tabelas na base de dados
+
+`php artisan migrate:fresh --seed` Apagar tabelas, recriar as tabelas, popular tabelas com dados aleatórios (Optional)
 
 `npm run watch` Monitor de alteração (Optional)
 
@@ -35,7 +43,7 @@
 
 `php artisan serve` Execute o servidor do Framework
 
-3. Acesse `http://localhost:8000` em seu navegador de Internet
+5. Acesse `http://localhost:8000` em seu navegador de Internet
 
 ***
 
