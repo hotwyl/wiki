@@ -7,6 +7,7 @@
 | formate/decode xml | https://jsonformatter.org/xml-url-decode | |
 | testar php | https://onlinephp.io | |
 | testar html/css/js | https://codepen.io/pen | |
+| interpretar html/css/js | https://html-online.com | |
 | testar diversas linguagens | https://replit.com | |
 | gerador fake | https://www.4devs.com.br | |
 | teste requisição | https://resttesttest.com | |
