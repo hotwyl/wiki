@@ -84,10 +84,20 @@ Utilize o comando `php artisan make:model NomeDoModel`. Isso cria um arquivo de 
 ### Criando uma Migration:
 
 Utilize o comando `php artisan make:migration create_nome_da_tabela`. Substitua `nome_da_tabela` pelo nome da tabela que você deseja criar no banco de dados. Esse comando cria um arquivo de migration na pasta `database/migrations`.
+~~~
+php artisan make:migration create_produtos_table
+~~~
 
 ### Criando um Controller:
 
 Utilize o comando `php artisan make:controller NomeDoController`. Isso cria um arquivo de controller na pasta `app/Http/Controllers` com o nome especificado.
+
+~~~
+php artisan make:controller NomeDoController
+php artisan make:controller NomeDoController --all
+php artisan make:controller NomeDoController --api
+php artisan make:controller NomeDoController --resource
+~~~
 
 ### Criando um Resource Controller (Opcional):
 
@@ -110,8 +120,8 @@ Após criar as migrations, você precisa executá-las para criar as tabelas no b
 Para criar um model chamado Produto, uma migration, um controller e um resource controller, utilize os seguintes comandos:
 ~~~
 php artisan make:model Produto
-php artisan make:migration create_produtos_table
-php artisan make:controller ProdutoController -r
+php artisan make:model Site -a
+php artisan make:model -a Post
 ~~~
 Observações:
 
@@ -119,20 +129,20 @@ Observações:
 - Utilize o flag `--force` para sobrescrever arquivos existentes.
 
 ~~~~
-php artisan make:model -a Post
 php artisan make:controller --all --force ProductController
+php artisan make:controller ProdutoController -r
 ~~~~
 
 ~~~~
-php artisan make:controller NomeDoController -r
-php artisan make:controller NomeDoController -api
-composer require lucascudo/laravel-pt-br-localization --dev            
-  
-php artisan vendor:publish --tag=laravel-pt-br-localization      
+composer require lucascudo/laravel-pt-br-localization --dev
+php artisan vendor:publish --tag=laravel-pt-br-localization
 
-php artisan make:controller SiteController --api
-
-php artisan make:model Site -a
+php artisan optimize
+php artisan optimize:clear
+php artisan route:cache
+php artisan route:clear
 ~~~~
 
-/* https://github.com/especializati/setup-docker-laravel */
+https://github.com/especializati/setup-docker-laravel
+
+https://blueprint.laravelshift.com/
