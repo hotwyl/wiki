@@ -126,6 +126,13 @@ php artisan make:controller --all --force ProductController
 ~~~~
 php artisan make:controller NomeDoController -r
 php artisan make:controller NomeDoController -api
+composer require lucascudo/laravel-pt-br-localization --dev            
+  
+php artisan vendor:publish --tag=laravel-pt-br-localization      
+
+php artisan make:controller SiteController --api
+
+php artisan make:model Site -a
 ~~~~
 
 /* https://github.com/especializati/setup-docker-laravel */
