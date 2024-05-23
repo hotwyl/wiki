@@ -30,4 +30,4 @@
 
 - `mkdir` (Cria diretórios)
 
-- `hostname -a && hostname -i && whoami`: imprime informações do nome da maquina, seu ip e usuario logado.
+- `lsb_release - a && hostname -a && hostname -i && whoami`: imprime informações do nome da maquina, seu ip e usuario logado.
