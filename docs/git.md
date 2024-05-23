@@ -6,6 +6,32 @@ ssh-add /root/.ssh/id_rsa
 cat  ~/.ssh/id_rsa.pub
 ~~~
 Copiar chave e colocar no GIT
+****
+Quick setup — if you’ve done this kind of thing before
+
+- SSH:`git@github.com:{usuario}/{projeto}.git`
+- HTTPS: `https://github.com/{usuario}/{projeto}.git`
+
+Comece criando um novo arquivo ou carregando um arquivo existente. Recomendamos que cada repositório inclua um `README`, `LICENSE` e `.gitignore`.
+
+…ou crie um novo repositório na linha de comando
+
+```
+echo "# {projeto}" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/{usuario}/{projeto}.git
+git push -u origin master
+```
+…ou envie um repositório existente a partir da linha de comando
+~~~
+git remote add origin https://github.com/{usuario}/{projeto}.git
+git branch -M master
+git push -u origin master
+~~~
+
 
 ****
 
