@@ -31,3 +31,5 @@
 - `mkdir` (Cria diretórios)
 
 - `lsb_release - a && hostname -a && hostname -i && whoami`: imprime informações do nome da maquina, seu ip e usuario logado.
+
+- `ifconfig`: verificar Ip 
