@@ -155,9 +155,6 @@ php artisan make:controller ProdutoController -r
 ~~~~
 
 ~~~~
-composer require lucascudo/laravel-pt-br-localization --dev
-php artisan vendor:publish --tag=laravel-pt-br-localization
-
 php artisan optimize
 php artisan optimize:clear
 php artisan route:cache
@@ -232,6 +229,8 @@ Importante
 
 O scaffolding de autenticação oferece recursos como login, logout e registro. É recomendável sempre ler a documentação de autenticação do Laravel para obter detalhes sobre o scaffolding de autenticação. Observe que o Laravel oferece alguns kits iniciais (como o Laravel-Breeze) além do pacote legado `laravel/ui`. Portanto, usar as visualizações de autenticação deste pacote é OPCIONAL e DEPENDENDO DE VOCÊ.
 
+****
+
 ## Instalação do Scaffolding Frontend Laravel UI (opcional)
 
 Depois de instalar o pacote `laravel/ui` usando `composer require laravel/ui`, você pode gerar o scaffolding frontend usando o comando Artisan `ui`:
@@ -258,6 +257,26 @@ O scaffolding de autenticação é opcional e requer a configuração adicional 
 
 ### Usando o pacote
 Vá para a seção Uso para ler como usar o modelo principal `AdminLTE` blade fornecido por este pacote.
+
+****
+
+### Laravel-Breeze
+
+~~~~
+# Instalar Laravel Breeze
+composer require laravel/breeze --dev
+php artisan breeze:install
+
+# Instalar dependencias de npm y compilar activos
+npm install
+npm run dev
+
+# Ejecutar migraciones de la base de datos
+php artisan migrate
+
+# Iniciar el servidor de desarrollo
+php artisan serve
+~~~~
 
 ****
 
