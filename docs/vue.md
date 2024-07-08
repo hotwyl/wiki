@@ -13,6 +13,17 @@ https://vuejs.org/
 
 `npm run build`
 
+## Vue UI
+Vuetify can also be installed using Vue UI, the new visual application for vue-cli-3. Ensure that you have the latest version of vue-cli installed and from your terminal type:
+
+~~~~
+// ensure vue-cli is >= 3.0
+$ vue --version
+
+// Then start the UI
+$ vue ui
+~~~~
+
 ## adicionar bootstrap
 Install bootstrap as you would any other JS module in the Vue project using npm install or by adding it to the `package.json`...
 ~~~~
@@ -121,7 +132,7 @@ mounted () {
 ...
 ~~~~
 
-add vuetfy
+## add vuetfy
 
 For a detailed explanation of how to get npm running in your environment, check out the official documentation. Alternatively, if you wish to use yarn, you can find the official documentation here. Once setup, you can run either command from your command prompt.
 
