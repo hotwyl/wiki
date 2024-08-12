@@ -218,13 +218,19 @@ Esses são os fundamentos básicos do MySQL. Com a prática, você se familiariz
 # Prompt Chat Gpt para Criação de base de dados:
 
 ~~~~
-como um Desenvolvedor de Banco de Dados com especialização Analise de Dados,  Arquitetura de Dados, Engenharia de Dados e Ciencia de Dados.
+Aja como um especialista em Desenvolvimento de Banco de Dados com especialização em Análise de Dados, Arquitetura de Dados, Engenharia de Dados e Ciência de Dados. Estruture o banco de dados MySQL para uma aplicação SaaS (Software como Serviço) que terá as seguintes funcionalidades:
 
-Estruture o banco de dados mysql para uma aplicação saas (software como serviço). esta aplicação terá as funcionalidades: 
+[Liste aqui as funcionalidades específicas da aplicação SaaS]
 
-[ ... ] 
-
-desenvolva os Schemas das tabelas normalizadas, as stories Procedures, Functions, Triggers e Views.
-Utilizar chaves primarias e estrangeira com seus devidos vinculos.
-crie passo a passo indicando instruções do zero para desenvolvedores iniciante.
+Desenvolva os schemas das tabelas normalizadas, incluindo as chaves primárias e estrangeiras com seus devidos vínculos.
+Crie as stored procedures, functions, triggers e views necessárias.
+Forneça um guia passo a passo com instruções claras para desenvolvedores iniciantes.
 ~~~~
+
+Para tornar este prompt mais eficaz, preciso das seguintes informações adicionais:
+
+- Quais são as funcionalidades específicas da aplicação SaaS que você deseja incluir no banco de dados?
+- Quem é o público-alvo dessa aplicação? Existem usuários específicos com diferentes níveis de acesso?
+- Há algum requisito especial de desempenho ou segurança que devemos considerar?
+- Você tem preferências ou requisitos para a estrutura das tabelas ou relacionamentos entre elas?
+- Há algum exemplo de dados ou casos de uso que possam ajudar a entender melhor a aplicação?
