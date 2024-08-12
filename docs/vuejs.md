@@ -678,6 +678,7 @@ Aqui, você cria uma instância do Vue, define os dados e monta o aplicativo no 
 Usar o CDN é uma maneira prática de experimentar Vue.js e criar pequenos projetos rapidamente. 
 
 ***
+O `v-on` é uma diretiva em Vue.js usada para ouvir e lidar com eventos no DOM. Pode ser utilizada para registrar ouvintes de eventos em elementos HTML, e você pode usar `v-on` para responder a eventos como cliques, mudanças, e outros tipos de eventos.
 
 ## Sintaxe Básica
 
