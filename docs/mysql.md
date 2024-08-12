@@ -218,4 +218,13 @@ Esses são os fundamentos básicos do MySQL. Com a prática, você se familiariz
 # Prompt Chat Gpt para Criação de base de dados:
 
 ~~~~
+como um Desenvolvedor de Banco de Dados com especialização Analise de Dados,  Arquitetura de Dados, Engenharia de Dados e Ciencia de Dados.
+
+Estruture o banco de dados mysql para uma aplicação saas (software como serviço). esta aplicação terá as funcionalidades: 
+
+[ ... ] 
+
+desenvolva os Schemas das tabelas normalizadas, as stories Procedures, Functions, Triggers e Views.
+Utilizar chaves primarias e estrangeira com seus devidos vinculos.
+crie passo a passo indicando instruções do zero para desenvolvedores iniciante.
 ~~~~
