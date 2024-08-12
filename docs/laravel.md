@@ -446,7 +446,7 @@ https://blueprint.laravelshift.com/
 
 ***
 
-## Instalação padrão projeto laravel 11
+## Prompt chat gpt para Instalação padrão projeto laravel 11
 ~~~~
 Aja como um especialista em Laravel. Instale e configure o Laravel 11, configure a tradução para português (pt-BR), instale e configure o AdminLTE, e configure a autenticação padrão com confirmação e comunicação por email. Inclua o processo de reset e alteração de senha.
 
@@ -482,7 +482,7 @@ Escreva as instruções completas para realizar essas configurações no Laravel
 
 ***
 
-## Instalação projeto api laravel 11
+## Prompt chat gpt para Instalação projeto api laravel 11
 ~~~~
 Aja como um desenvolvedor web experiente e um especialista em configuração de frameworks PHP. Sua tarefa é fornecer instruções detalhadas para instalar e configurar o Laravel 11 em um ambiente Windows com Apache, incluindo a instalação de traduções para português (pt-br), configuração do modo API Resource com autenticação padrão do Laravel e ajustes adicionais. As etapas devem incluir:
 
@@ -511,7 +511,7 @@ Escreva as instruções completas para realizar essas configurações no Laravel
 
 ***
 
-## adicionar ao projeto api nova funcionalidade
+## Prompt chat gpt para adicionar ao projeto api nova funcionalidade
 ~~~~
 Aja como um especialista em desenvolvimento de software utilizando Laravel 11.
 
@@ -552,7 +552,7 @@ Certifique-se de seguir as convenções de nomeação e estrutura do projeto Lar
 
 ***
 
-## adicionar ao projeto api nova funcionalidade
+## Prompt chat gpt para adicionar ao projeto api nova funcionalidade
 ~~~~
 Aja como um especialista em desenvolvimento de software utilizando Laravel 11.
 
