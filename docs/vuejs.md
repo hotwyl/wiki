@@ -571,3 +571,253 @@ import pinia from './pinia';
 
 createApp(App).use(pinia).mount('#app');
 ~~~~
+
+# Como Usar Vue.js com CDN
+Aqui está um exemplo básico de como usar Vue.js em um projeto HTML com CDN:
+
+## Incluir o Vue.js via CDN
+Adicione o link para o Vue.js no seu arquivo HTML. Dependendo da versão que você deseja usar (Vue 2 ou Vue 3), o CDN pode variar.
+
+### Para Vue 3:
+~~~~
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue 3 CDN Example</title>
+  <!-- Vue 3 CDN -->
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  </div>
+
+  <script>
+    const App = {
+      data() {
+        return {
+          message: 'Hello, Vue 3 with CDN!'
+        };
+      }
+    };
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
+~~~~
+
+### Para Vue 2:
+~~~~
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue 2 CDN Example</title>
+  <!-- Vue 2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello, Vue 2 with CDN!'
+      }
+    });
+  </script>
+</body>
+</html>
+~~~~
+
+## Explicação do Código
+
+### Inclusão do Vue.js via CDN:
+- Vue 3: `<script src="https://unpkg.com/vue@next"></script>`
+- Vue 2: `<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>`
+Isso carrega o Vue.js diretamente da CDN, permitindo que você use o Vue.js sem instalação local.
+
+### Estrutura HTML:
+
+`<div id="app">`: O contêiner onde o Vue.js irá "montar" o aplicativo. O Vue.js controla o conteúdo dentro deste `div`.
+
+### Script Vue.js:
+- **Vue 3**:
+~~~~
+const App = {
+  data() {
+    return {
+      message: 'Hello, Vue 3 with CDN!'
+    };
+  }
+};
+Vue.createApp(App).mount('#app');
+~~~~
+- **Vue 2**:
+~~~~
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello, Vue 2 with CDN!'
+  }
+});
+~~~~
+Aqui, você cria uma instância do Vue, define os dados e monta o aplicativo no elemento com `id="app"`.
+
+### Recursos Adicionais
+- **Vue.js 3 CDN**: `https://unpkg.com/vue@next` (ou `https://cdn.jsdelivr.net/npm/vue@next`)
+- **Vue.js 2 CDN**: `https://cdn.jsdelivr.net/npm/vue@2` (ou `https://unpkg.com/vue@2`)
+  
+Usar o CDN é uma maneira prática de experimentar Vue.js e criar pequenos projetos rapidamente. 
+
+***
+
+## Sintaxe Básica
+
+A sintaxe básica do `v-on` é a seguinte:
+~~~~
+<button v-on:click="methodName">Clique aqui</button>
+~~~~
+Você também pode usar a forma abreviada `@`, que é equivalente a `v-on`:
+~~~~
+<button @click="methodName">Clique aqui</button>
+~~~~
+
+## Exemplos de Uso
+
+### 1. Evento de Clique (`click`)
+Quando um botão é clicado, o método `handleClick` é chamado.
+~~~~
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evento de Clique</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <button @click="handleClick">Clique em mim</button>
+    <p>{{ message }}</p>
+  </div>
+
+  <script>
+    const App = {
+      data() {
+        return {
+          message: 'Nenhum clique ainda.'
+        };
+      },
+      methods: {
+        handleClick() {
+          this.message = 'Botão clicado!';
+        }
+      }
+    };
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
+~~~~
+
+### Evento de Mudança (`change`)
+Quando o valor de um campo de entrada é alterado, o método `handleChange` é chamado.
+~~~~
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evento de Mudança</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="text" @change="handleChange" placeholder="Digite algo">
+    <p>Valor atual: {{ inputValue }}</p>
+  </div>
+
+  <script>
+    const App = {
+      data() {
+        return {
+          inputValue: ''
+        };
+      },
+      methods: {
+        handleChange(event) {
+          this.inputValue = event.target.value;
+        }
+      }
+    };
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
+~~~~
+
+## Vários Eventos e Modificadores
+
+**Modificadores de Evento**
+Você pode usar modificadores de eventos para simplificar o código e lidar com eventos de forma mais específica.
+
+- `.prevent`: Chama `event.preventDefault()`.
+- `.stop`: Chama `event.stopPropagation()`.
+- `.capture`: Adiciona um ouvinte no modo de captura.
+- `.once`: Remove o ouvinte após a primeira execução.
+- `.passive`: Marca o ouvinte como passivo, indicando que não chamará `preventDefault()`.
+
+**Exemplo com modificadores**:
+~~~~
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificadores de Evento</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Prevent default behavior of the event -->
+    <a href="https://example.com" @click.prevent="handleClick">Não vá para o link</a>
+    <!-- Stop the event from propagating further -->
+    <button @click.stop="handleButtonClick">Clique aqui</button>
+  </div>
+
+  <script>
+    const App = {
+      methods: {
+        handleClick() {
+          console.log('Link clicado');
+        },
+        handleButtonClick() {
+          console.log('Botão clicado');
+        }
+      }
+    };
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
+~~~~
+
+### Resumo
+
+- `v-on`: Usado para ouvir e reagir a eventos em elementos DOM.
+- **Sintaxe**:` v-on:evento="método"` ou a forma abreviada `@evento="método"`.
+- **Eventos Comuns**: `click`, `change`, `input`, `submit`, entre outros.
+- **Modificadores de Evento**: `prevent`, `stop`, `capture`, `once`, `passive`.
+  
+Esses conceitos ajudam a tornar seu aplicativo interativo e responsivo às ações do usuário.
