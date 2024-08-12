@@ -283,3 +283,104 @@ php artisan serve
 https://github.com/especializati/setup-docker-laravel
 
 https://blueprint.laravelshift.com/
+
+
+## Instalação padrão projeto laravel 11
+~~~~
+Aja como um especialista em Laravel. Instale e configure o Laravel 11, configure a tradução para português (pt-BR), instale e configure o AdminLTE, e configure a autenticação padrão com confirmação e comunicação por email. Inclua o processo de reset e alteração de senha.
+
+Aqui estão as especificações detalhadas:
+- Sistema Operacional: Windows
+- Servidor Web: Apache
+- Versão do PHP: PHP 8.2
+- Banco de Dados: MySQL
+
+Instalação do Laravel 11
+- Baixe e instale o Composer.
+- Crie um novo projeto Laravel 11 usando o Composer.
+
+Configuração de Tradução para Português (pt-BR)
+- Instale os pacotes de tradução necessários para português (pt-BR).
+- Configure o Laravel para usar o português (pt-BR) como o idioma padrão.
+
+Instalação e Configuração do AdminLTE
+- Baixe e instale o AdminLTE.
+- Integre o AdminLTE ao Laravel incluindo todas as funcionalidades e telas de autenticação.
+
+Configuração de Autenticação
+- Ajustar o modelo de usuário para utilizar UUID e SoftDelete.
+- Configure a autenticação padrão do Laravel.
+- Adicione a confirmação por email após o registro.
+- Configure a comunicação por email utilizando recursos padrões do laravel.
+- Implemente o processo de reset e alteração de senha, ajustando as views conforme necessário para manter a consistência com o AdminLTE.
+
+Sua Tarefa:
+Escreva as instruções completas para realizar essas configurações no Laravel 11, garantindo que todas as etapas sejam detalhadas e fáceis de seguir para um desenvolvedor que esteja utilizando Windows e Apache.
+
+~~~~
+
+## Instalação projeto api laravel 11
+~~~~
+Aja como um desenvolvedor web experiente e um especialista em configuração de frameworks PHP. Sua tarefa é fornecer instruções detalhadas para instalar e configurar o Laravel 11 em um ambiente Windows com Apache, incluindo a instalação de traduções para português (pt-br), configuração do modo API Resource com autenticação padrão do Laravel e ajustes adicionais. As etapas devem incluir:
+
+Instalar o Laravel 11:
+- Passo a passo para instalar o Composer, caso não esteja instalado.
+- Comandos necessários para criar um novo projeto Laravel 11.
+
+Configurar o Apache para o Laravel:
+- Instruções detalhadas para configurar o servidor Apache para servir o aplicativo Laravel.
+
+Instalar e Configurar Tradução para Português (pt-br):
+- Comandos para instalar o pacote de tradução para português.
+- Configurações necessárias no Laravel para definir o idioma padrão.
+
+Configurar o Modo API Resource com Autenticação Padrão:
+- Etapas para configurar a autenticação padrão do Laravel.
+- Comandos para gerar e configurar controladores, rotas e middleware para o modo API Resource.
+
+Configurações Adicionais para Autenticação:
+- Ajustar o modelo de usuário para utilizar UUID e SoftDelete.
+- Instruções para criar e configurar métodos e processos de autenticação, registro, reset de senha, alteração de senha e confirmação por email.
+
+Sua Tarefa:
+Escreva as instruções completas para realizar essas configurações no Laravel 11, garantindo que todas as etapas sejam detalhadas e fáceis de seguir para um desenvolvedor que esteja utilizando Windows e Apache.
+~~~~
+
+## adicionar ao projeto api nova funcionalidade
+~~~~
+Aja como um especialista em desenvolvimento de software utilizando Laravel 11.
+
+Crie uma estrutura CRUD completa (model, migration, factory, seeder, route, requests, controller) utilizando UUID e SoftDeletes. Utilize métodos API Resource. Baseie-se na estrutura da tabela abaixo:
+
+[Insira aqui a estrutura da tabela desejada]
+
+Requisitos:
+
+Model:
+- Configure o model para utilizar UUID e SoftDeletes.
+
+Migration:
+- Crie uma migration para a tabela acima, incluindo UUID e SoftDeletes.
+
+Factory:
+- Crie uma factory para gerar dados de exemplo para a tabela.
+
+Seeder:
+- Crie um seeder para popular a tabela com dados de exemplo.
+Route:
+
+Defina rotas API Resource para o CRUD.
+
+Requests:
+- Crie classes de request para validação na criação e atualização de registros.
+
+- Regras de validação:
+   - [Insira aqui as regras de validação específicas]
+
+Controller:
+- Crie um controller utilizando métodos API Resource.
+- Inclua métodos customizados se necessário:
+   - [Insira aqui qualquer funcionalidade extra]
+
+Certifique-se de seguir as convenções de nomeação e estrutura do projeto Laravel padrão.
+~~~~
