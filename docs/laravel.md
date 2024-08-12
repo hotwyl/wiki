@@ -1,5 +1,5 @@
 
-## Instalação
+## Instalação via clone projeto
 
 - Clone o repositório e `cd` acesse o mesmo
 - Execute o comando `composer install`
@@ -102,12 +102,16 @@ Este comando (assumindo que o pacote `laravel-shift/blueprint` está instalado) 
 
 Utilize o comando `php artisan make:model NomeDoModel`. Isso cria um arquivo de model na pasta `app/Models` com o nome especificado.
 
+***
+
 ### Criando uma Migration:
 
 Utilize o comando `php artisan make:migration create_nome_da_tabela`. Substitua `nome_da_tabela` pelo nome da tabela que você deseja criar no banco de dados. Esse comando cria um arquivo de migration na pasta `database/migrations`.
 ~~~
 php artisan make:migration create_produtos_table
 ~~~
+
+***
 
 ### Criando um Controller:
 
@@ -120,21 +124,31 @@ php artisan make:controller NomeDoController --api
 php artisan make:controller NomeDoController --resource
 ~~~
 
+***
+
 ### Criando um Resource Controller (Opcional):
 
 Adicione a flag `-r` ao comando de criação do controller para gerar um resource controller. O comando fica assim: `php artisan make:controller NomeDoController -r`. Um resource controller já possui métodos prontos para as operações CRUD (Create, Read, Update, Delete).
+
+***
 
 ### Criando um Factory (Opcional):
 
 Utilize o comando `php artisan make:factory NomeDoModelFactory`. Isso cria um arquivo de factory na pasta `database/factories` com o nome especificado. Factories são úteis para gerar dados de teste.
 
+***
+
 ### Criando um Seeder (Opcional):
 
 Utilize o comando `php artisan make:seeder NomeDoSeeder`. Isso cria um arquivo de seeder na pasta `database/seeds` com o nome especificado. Seeders são usados para popular o banco de dados com dados iniciais.
 
+***
+
 ### Executando Migrations:
 
 Após criar as migrations, você precisa executá-las para criar as tabelas no banco de dados. Utilize o comando `php artisan migrate`.
+
+***
 
 ### Exemplo Completo:
 
@@ -154,13 +168,159 @@ php artisan make:controller --all --force ProductController
 php artisan make:controller ProdutoController -r
 ~~~~
 
+***
+
+## sequencia comando uteis utilizados com frequencia
+
+````
+composer create-project laravel/laravel [nome_projeto]
+````
+**O que faz**: Cria um novo projeto Laravel com o nome que você especificar.
+
+**Explicação**: É como começar um novo projeto do zero com todas as configurações básicas do Laravel já prontas. O `[nome_projeto]` é o nome que você dá à pasta onde o projeto será criado.
+
+***
+
+````
+php artisan install:api
+````
+
+**O que faz**: Este comando não é um comando padrão do Laravel e pode se referir a um pacote ou uma extensão específica que adiciona funcionalidades para APIs.
+
+**Explicação**: Pode ser usado para configurar algumas coisas básicas necessárias para trabalhar com APIs em um projeto Laravel, mas você deve verificar a documentação específica do pacote ou extensão que o fornece.
+
+***
+
+````
+php artisan make:model Model -m -c -resource
+````
+
+**O que faz**: Cria um novo modelo chamado `Model`, junto com um arquivo de migração (-m), um controlador (-c), e um recurso (-resource).
+
+**Explicação**: Cria uma estrutura básica para um novo modelo no Laravel, já preparando um arquivo para criar a tabela no banco de dados, um controlador para gerenciar a lógica, e um recurso para formatar a saída dos dados.
+
+***
+
+````
+php artisan make:migration add_column_model_softdelete --table=model
+````
+
+**O que faz**: Cria uma nova migração para adicionar uma coluna chamada `softdelete` à tabela model.
+
+**Explicação**: Cria um arquivo que irá definir as mudanças no banco de dados, neste caso, adicionando uma nova coluna para suportar a exclusão suave (soft deletes).
+
+***
+
+````
+php artisan make:request StoreModelRequest
+````
+
+**O que faz**: Cria uma nova classe de Request chamada `StoreModelRequest` para validar dados quando você está armazenando um modelo.
+
+**Explicação**: Cria um arquivo onde você pode definir as regras de validação para os dados que estão sendo enviados quando você cria um novo item.
+
+***
+
+````
+php artisan make:request UpdateModelRequest
+````
+
+**O que faz**: Cria uma nova classe de Request chamada `UpdateModelRequest` para validar dados quando você está atualizando um modelo.
+
+**Explicação**: Cria um arquivo onde você pode definir as regras de validação para os dados que estão sendo enviados quando você atualiza um item existente.
+
+***
+
+````
+php artisan make:resource ModelResource -c
+````
+
+**O que faz**: Cria um novo recurso chamado `ModelResource` para formatar a saída dos dados, com a opção `-c` para criar também uma classe de coleção.
+
+**Explicação**: Cria um arquivo que transforma os dados do modelo em um formato que será retornado em uma API, como JSON.
+
+***
+
+````
+php artisan make:controller ModelController --model=Model
+````
+
+**O que faz**: Cria um novo controlador chamado ModelController e automaticamente injeta o modelo Model.
+
+**Explicação**: Cria um arquivo para gerenciar as ações relacionadas ao modelo `Model`, com o modelo já disponível dentro do controlador.
+
+***
+
+````
+php artisan make:controller ModelController --api -m --model=Model -r -R
+````
+
+**O que faz**: Cria um controlador para APIs chamado `ModelController`, com opções para configurar o controlador como um recurso API (`--api`), gerar métodos CRUD básicos (`-r` e `-R`), e injetar o modelo `Model`.
+
+**Explicação**: Cria um controlador específico para APIs que já vem com métodos básicos (como criar, ler, atualizar e deletar) e o modelo já está pronto para uso.
+
+***
+
+````
+php artisan migrate:fresh
+````
+
+**O que faz**: Apaga todas as tabelas do banco de dados e recria todas as tabelas a partir das migrações.
+
+**Explicação**: Remove todas as tabelas existentes no banco de dados e cria todas novamente, do jeito que estão definidas nas suas migrações.
+
+***
+
+````
+php artisan migrate:refresh --seed
+````
+
+**O que faz**: Reverte todas as migrações, aplica novamente todas as migrações e, após isso, executa os seeders para popular o banco de dados com dados iniciais.
+
+**Explicação**: Recria o banco de dados aplicando todas as migrações e depois adiciona dados iniciais que você definiu, útil para testar com dados limpos e prontos.
+
+***
+
 ~~~~
 php artisan optimize
+~~~~
+
+**O que faz**: Este comando otimiza o desempenho da aplicação Laravel. Ele pode combinar e cachear várias partes da aplicação para melhorar o tempo de resposta.
+
+**Explicação**: Faz algumas melhorias internas para que o Laravel funcione mais rápido ao juntar e guardar partes do sistema em cache, como arquivos de configuração e rotas.
+
+***
+
+~~~~
 php artisan optimize:clear
+~~~~
+
+**O que faz**: Limpa todos os caches e otimizações que foram gerados pelo Laravel.
+
+**Explicação**: Remove todos os arquivos que foram criados para melhorar o desempenho da aplicação, retornando ao estado inicial. Isso é útil quando você precisa garantir que está vendo as mudanças mais recentes na sua aplicação.
+
+***
+
+~~~~
 php artisan route:cache
+~~~~
+
+**O que faz**: Cria um arquivo de cache para todas as rotas definidas na aplicação, melhorando o desempenho ao acessar as rotas.
+
+**Explicação**: Salva todas as rotas em um arquivo de cache para que o Laravel possa acessar mais rapidamente, ao invés de reprocessar as rotas toda vez que uma requisição é feita.
+
+***
+
+~~~~
 php artisan route:clear
 ~~~~
-*****
+
+**O que faz**: Remove o cache de rotas que foi criado anteriormente.
+
+**Explicação**: Apaga o arquivo de cache das rotas para que o Laravel recompile as rotas a partir dos arquivos de definição na próxima vez que você acessar a aplicação. É útil após modificar as rotas e querer ver as mudanças imediatamente.
+
+***
+
 ## Módulo de linguagem pt-BR (português brasileiro) para Laravel
 
 https://github.com/lucascudo/laravel-pt-BR-localization
@@ -284,6 +444,7 @@ https://github.com/especializati/setup-docker-laravel
 
 https://blueprint.laravelshift.com/
 
+***
 
 ## Instalação padrão projeto laravel 11
 ~~~~
@@ -319,6 +480,8 @@ Escreva as instruções completas para realizar essas configurações no Laravel
 
 ~~~~
 
+***
+
 ## Instalação projeto api laravel 11
 ~~~~
 Aja como um desenvolvedor web experiente e um especialista em configuração de frameworks PHP. Sua tarefa é fornecer instruções detalhadas para instalar e configurar o Laravel 11 em um ambiente Windows com Apache, incluindo a instalação de traduções para português (pt-br), configuração do modo API Resource com autenticação padrão do Laravel e ajustes adicionais. As etapas devem incluir:
@@ -345,6 +508,8 @@ Configurações Adicionais para Autenticação:
 Sua Tarefa:
 Escreva as instruções completas para realizar essas configurações no Laravel 11, garantindo que todas as etapas sejam detalhadas e fáceis de seguir para um desenvolvedor que esteja utilizando Windows e Apache.
 ~~~~
+
+***
 
 ## adicionar ao projeto api nova funcionalidade
 ~~~~
@@ -383,4 +548,60 @@ Controller:
    - [Insira aqui qualquer funcionalidade extra]
 
 Certifique-se de seguir as convenções de nomeação e estrutura do projeto Laravel padrão.
+~~~~
+
+***
+
+## adicionar ao projeto api nova funcionalidade
+~~~~
+Aja como um especialista em desenvolvimento de software utilizando Laravel 11.
+
+Crie uma estrutura CRUD (model, migration, factory, seeder, route, requests, controller, views) utilizando UUID e SoftDelete. Utilize métodos Resource. Baseie-se na estrutura da tabela fornecida:
+
+[Insira aqui a estrutura da tabela desejada]
+
+Requisitos
+- Model: Configure o model para utilizar UUID e SoftDeletes.
+- Migration: Crie uma migration para a tabela fornecida, incluindo UUID e SoftDeletes.
+- Factory: Crie uma factory para gerar dados de exemplo para a tabela.
+- Seeder: Crie um seeder para popular a tabela com dados de exemplo.
+- Route: Defina rotas API Resource para o CRUD.
+- Requests: Crie classes de request para validação na criação e atualização de registros.
+- Controller: Crie um controller utilizando métodos API Resource.
+
+Estrutura Detalhada
+
+Modelo
+- Configure o modelo da seguinte forma:
+   - Utilize UUID como a chave primária.
+   - Inclua SoftDeletes.
+
+Migration
+- Crie a migration para a tabela com os seguintes campos:
+   - UUID como chave primária.
+   - Campos conforme a estrutura da tabela fornecida.
+   - SoftDeletes.
+
+Factory
+- Defina a factory para gerar dados de exemplo:
+   - Inclua exemplos para todos os campos da tabela.
+
+Seeder
+- Implemente o seeder para popular a tabela com dados de exemplo:
+   - Utilize a factory para gerar os dados.
+
+Rotas
+- Defina as rotas API Resource:
+   - Configure rotas para todos os métodos CRUD.
+
+Requests
+- Crie classes de request para validação:
+   - Defina validações para criação e atualização de registros.
+
+Controller
+- Crie o controller utilizando métodos API Resource:
+   - Implemente métodos index, show, store, update, e destroy.
+
+Sua tarefa
+- Siga a estrutura detalhada acima para criar a aplicação completa.
 ~~~~
