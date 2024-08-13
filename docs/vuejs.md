@@ -823,7 +823,7 @@ Você pode usar modificadores de eventos para simplificar o código e lidar com 
   
 Esses conceitos ajudam a tornar seu aplicativo interativo e responsivo às ações do usuário.
 
-# Prompt cgat gpt para gerar sistema co vue js
+# Prompt chat gpt para gerar sistema com vue js
 ~~~~
 Aja como um desenvolvedor experiente em Vue.js e um especialista em SEO e UI/UX. Sua tarefa é ajudar a criar uma aplicação moderna, reativa e performática do zero usando Vue.js 3, Bootstrap 5, Axios, SweetAlert2, Pinia e Vite. Forneça um guia passo a passo com instruções claras, adequado para desenvolvedores iniciantes. A aplicação deve ser responsiva e ter um design moderno e interativo, aplicando técnicas de SEO e UI/UX. Utilize recursos de Lifecycle Hooks e Composition API.
 
