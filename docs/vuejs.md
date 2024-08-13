@@ -822,3 +822,64 @@ Você pode usar modificadores de eventos para simplificar o código e lidar com 
 - **Modificadores de Evento**: `prevent`, `stop`, `capture`, `once`, `passive`.
   
 Esses conceitos ajudam a tornar seu aplicativo interativo e responsivo às ações do usuário.
+
+# Prompt cgat gpt para gerar sistema co vue js
+~~~~
+Aja como um desenvolvedor experiente em Vue.js e um especialista em SEO e UI/UX. Sua tarefa é ajudar a criar uma aplicação moderna, reativa e performática do zero usando Vue.js 3, Bootstrap 5, Axios, SweetAlert2, Pinia e Vite. Forneça um guia passo a passo com instruções claras, adequado para desenvolvedores iniciantes. A aplicação deve ser responsiva e ter um design moderno e interativo, aplicando técnicas de SEO e UI/UX. Utilize recursos de Lifecycle Hooks e Composition API.
+
+Objetivo da Aplicação:
+Criar uma aplicação web moderna com design interativo e otimização para SEO.
+[funcionalidades]
+
+Ferramentas Utilizadas:
+- Vue.js 3
+- Bootstrap 5
+- Axios
+- SweetAlert2
+- Pinia
+- Vite
+
+Funcionalidades Essenciais:
+- Autenticação de Usuário: Sistema de login e registro de usuários.
+- CRUD de Dados: Manipulação de dados como produtos, usuários ou posts.
+- Integração com API: Conectar a APIs externas ou internas usando Axios.
+- Notificações e Alertas: Utilizar SweetAlert2 para notificações de sucesso/erro e confirmações de ações.
+- Navegação e Rotas: Configurar navegação entre múltiplas páginas principais (ex: home, perfil, dashboard).
+- Formulários e Validações: Implementar formulários complexos com validações necessárias.
+- Interatividade: Implementar elementos interativos como dropdowns, modais e carrosséis.
+- Desempenho: Otimizar o tempo de carregamento e a performance da aplicação.
+- SEO: Aplicar práticas de SEO como otimização de meta tags e uso de URLs amigáveis.
+
+Estrutura do Guia:
+Configuração do Ambiente de Desenvolvimento
+
+Instalação e configuração do Vite:
+Configuração inicial do projeto Vue.js com Bootstrap 5
+
+Configuração e Estrutura do Projeto:
+- Configuração do Vue Router para navegação
+- Configuração do Pinia para gerenciamento de estado
+- Estruturação de pastas e componentes
+
+Desenvolvimento das Funcionalidades
+- Implementação do sistema de autenticação de usuário
+- CRUD de dados com Axios
+- Utilização de Lifecycle Hooks e Composition API
+- Integração do SweetAlert2 para notificações e alertas
+- Desenvolvimento de formulários e validações
+- Gerenciamento de estado com Pina
+
+Design e Interatividade:
+- Aplicação de Bootstrap 5 para design responsivo
+- Implementação de elementos interativos (dropdowns, modais, carrosséis)
+- Aplicação de técnicas de UI/UX para melhorar a experiência do usuário
+
+Otimização de Desempenho
+- Técnicas para melhorar o tempo de carregamento
+- Otimização de imagens e outros recursos estáticos
+
+SEO e Boas Práticas:
+- Otimização de meta tags
+- Configuração de URLs amigáveis
+- Aplicação de outras técnicas de SEO
+~~~~
